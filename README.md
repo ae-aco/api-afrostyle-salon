@@ -9,3 +9,9 @@ In this mock scenario, I have designed and implemented a **afrocentric salon res
 - Implement the following endpoints: POST, GET, PUT, DELETE
 - Add HTTP response codes and error handling to the endpoints.
 
+### Folders & Files
+The files used in this project can be found in this branch *api-afrostyle-salon*.
+- *afro_salon.sql* (in the schema folder)
+	- Use this file in mySQL to create and use the database. Dummy data is included.
+- *index.js* (in the salon-api folder)
+	- Use this file to run the API.
