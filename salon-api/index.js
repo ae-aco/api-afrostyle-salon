@@ -80,7 +80,7 @@ app.put('/update-client/:id', (req, res) => {
 app.delete('/delete-client/:id', (req, res) => {
   const clientId = req.params.id;
   
-  const sql = 'DELETE FROM clients WHERE id = ?';
+  const sql = 'DELETE FROM clients WHERE client_id = ?';
   pool.query(sql, [clientId], (err, result) => {
     if (err) {
       console.error('Error deleting client:', err.message);
@@ -97,7 +97,7 @@ app.delete('/delete-client/:id', (req, res) => {
 
  //a route to retrieve a stylist availability
  app.get('/stylist-availability', (req, res) => {
-  const sql = 'SELECT s.stylist_name, a.availability_date, a.start_time FROM stylists s INNER JOIN availability a ON s.stylist_id = a.stylist_id';
+  const sql = 'SELECT s.stylist_name, a.availabile_date, a.start_time FROM stylists s INNER JOIN availability a ON s.stylist_id = a.stylist_id';
   
   pool.query(sql, (err, results) => {
     if (err) {
